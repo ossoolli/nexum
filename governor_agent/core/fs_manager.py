@@ -25,7 +25,7 @@ class WorkspaceGovernor(FileSystemEventHandler):
                 self.log_action(f"🚀 Routed {os.path.basename(event.src_path)} to {dest_dir}")
 
 if __name__ == '__main__':
-    target_path = "/home/madarmutaz/AI-Agents"
+    target_path = "os.path.dirname(os.path.abspath(__file__))"
     observer = Observer()
     observer.schedule(WorkspaceGovernor(target_path), target_path, recursive=False)
     observer.start()
