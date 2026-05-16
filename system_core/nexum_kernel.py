@@ -1,74 +1,72 @@
 import json
 import os
 import datetime
-import requests
 
 class NexumKernel:
     def __init__(self):
-        self.version = "v0.4.0-Beta"
-        self.master_key = "NEXUM-SIGMA-99"
-        self.vaults = {
-            "BTC": {"addr": "bc1p0uuqerrwsqawe0cd74hetayxte0rdrnn9nd9n5h94se2fv7knw2qt4t7v9", "symbol": "bitcoin"},
-            "TON": {"addr": "UQAVBa3YSDb-ExTzMVAEq6MfgKNyDbCt3FqLKhRekGMgHqlr", "symbol": "the-open-network"},
-            "SOL": {"addr": "GuWPwyXQKXQ5ntMBLHCXqNnhvumdrMnGxAZ4xm2Jiyzf", "symbol": "solana"},
-            "ETH": {"addr": "0xd9805c529d944ead2742Ebdbd6DC8Ad005A1E78", "symbol": "ethereum"},
-            "TRX": {"addr": "TW94CS14t8EtswVoQWy4wMoUEZDdtnxcPz", "symbol": "tron"}
-        }
+        self.version = "v0.4.5-Pro"
+        self.vaults = [
+            {"name": "BITCOIN", "symbol": "BTC", "color": "#f7931a"},
+            {"name": "SOLANA", "symbol": "SOL", "color": "#14f195"},
+            {"name": "ETHEREUM", "symbol": "ETH", "color": "#627eea"}
+        ]
 
-    def get_market_data(self):
-        try:
-            ids = ",".join([v['symbol'] for v in self.vaults.values()])
-            url = f"https://api.coingecko.com/api/v3/simple/price?ids={ids}&vs_currencies=usd"
-            response = requests.get(url, timeout=5)
-            return response.json()
-        except:
-            return {}
-
-    def sync_dashboard(self):
-        market = self.get_market_data()
-        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        html_content = f"""
+    def build_pro_terminal(self):
+        ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        html = f"""
         <!DOCTYPE html>
-        <html lang="ar" dir="rtl">
+        <html lang="en">
         <head>
             <meta charset="UTF-8">
-            <title>NEXUM | Terminal v0.4.0</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>NEXUM | Professional Terminal</title>
+            <script src="https://cdn.tailwindcss.com"></script>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
             <style>
-                :root {{ --gold: #d4af37; --bg: #050505; --card: #0f0f0f; --green: #00ff88; }}
-                body {{ background-color: var(--bg); color: #fff; font-family: 'JetBrains Mono', monospace; margin: 0; padding: 20px; }}
-                .terminal {{ max-width: 900px; margin: auto; border: 1px solid #222; border-radius: 8px; overflow: hidden; }}
-                .header {{ background: #111; padding: 15px; border-bottom: 1px solid #222; display: flex; justify-content: space-between; align-items: center; }}
-                .brand {{ color: var(--gold); font-size: 1.2rem; font-weight: bold; letter-spacing: 4px; }}
-                .status-tag {{ font-size: 0.7rem; color: var(--green); border: 1px solid var(--green); padding: 2px 8px; border-radius: 4px; }}
-                .grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1px; background: #222; }}
-                .asset-card {{ background: var(--card); padding: 20px; }}
-                .asset-name {{ color: #888; font-size: 0.7rem; text-transform: uppercase; }}
-                .asset-price {{ font-size: 1.5rem; margin: 10px 0; color: var(--gold); }}
-                .asset-addr {{ font-size: 0.6rem; color: #444; word-break: break-all; }}
-                .footer {{ padding: 15px; font-size: 0.6rem; color: #444; text-align: center; background: #0a0a0a; }}
+                body {{ background: #050505; color: #fff; font-family: 'Inter', sans-serif; }}
+                .glass-card {{ background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.05); }}
+                .trading-grid {{ display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }}
             </style>
         </head>
-        <body>
-            <div class="terminal">
-                <div class="header">
-                    <div class="brand">NEXUM TERMINAL</div>
-                    <div class="status-tag">CORE {self.version} :: ONLINE</div>
-                </div>
-                <div class="grid">
+        <body class="p-6">
+            <nav class="flex justify-between items-center mb-8 p-4 glass-card rounded-xl">
+                <div class="text-2xl font-black tracking-tighter text-yellow-500">NEXUM <span class="text-white">PRO</span></div>
+                <div class="text-xs text-gray-500 tracking-widest uppercase">System Status: <span class="text-green-500">Operational</span></div>
+            </nav>
+            <div class="max-w-7xl mx-auto">
+                <div class="trading-grid">
+                    <div class="glass-card p-6 rounded-2xl h-[450px]">
+                        <div class="flex justify-between mb-4">
+                            <h2 class="text-sm font-bold text-gray-400 uppercase">Market Intelligence</h2>
+                            <span class="text-xs text-yellow-600">{self.version}</span>
+                        </div>
+                        <canvas id="marketChart"></canvas>
+                    </div>
+                    <div class="space-y-4">
         """
-        for ticker, data in self.vaults.items():
-            price = market.get(data['symbol'], {}).get('usd', 'N/A')
-            html_content += f"""
-                    <div class="asset-card">
-                        <div class="asset-name">{ticker} / USD</div>
-                        <div class="asset-price">${price}</div>
-                        <div class="asset-addr">{data['addr']}</div>
-                    </div>"""
-        html_content += f"""</div><div class="footer">SYNC: {timestamp} | NEXUM KERNEL {self.version}</div></div></body></html>"""
-        with open("../index.html", "w", encoding="utf-8") as f:
-            f.write(html_content)
-        return True
+        for v in self.vaults:
+            html += f"""
+                        <div class="glass-card p-5 rounded-xl hover:border-yellow-500/30 transition-all">
+                            <div class="flex justify-between items-center">
+                                <span class="text-xs text-gray-500">{v['name']}</span>
+                                <div class="w-2 h-2 rounded-full" style="background: {v['color']}"></div>
+                            </div>
+                            <div class="text-xl font-mono mt-2 tracking-tighter">$ --.---</div>
+                        </div>
+            """
+        html += """
+                    </div>
+                </div>
+            </div>
+            <script>
+                const ctx = document.getElementById('marketChart').getContext('2d');
+                new Chart(ctx, { type: 'line', data: { labels: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'], datasets: [{ label: 'NEXUM Index', data: [12, 19, 15, 25, 22, 30], borderColor: '#d4af37', tension: 0.4, fill: true, backgroundColor: 'rgba(212, 175, 55, 0.05)' }] }, options: { responsive: true, maintainAspectRatio: false } });
+            </script>
+        </body>
+        </html>
+        """
+        with open("index.html", "w") as f: f.write(html)
 
 if __name__ == "__main__":
-    k = NexumKernel()
-    k.sync_dashboard()
+    kernel = NexumKernel()
+    kernel.build_pro_terminal()
