@@ -19,3 +19,8 @@ The network is in a state of **Total Mobilization** ordered by Mutaz Tailakh.
 - **Evolutionary Logic:** Nexum is not a static codebase; it utilizes the `ArchitecturalScout` to integrate cutting-edge decentralization tech.
 - **Current Frontier:** Focusing on Zero-Knowledge Proofs (ZKP) to allow agents to verify tasks without exposing raw data.
 - **Authority:** The Scout reports directly to the Kernel, with final design approval reserved for Mutaz Tailakh.
+
+## 🛡️ Post-Quantum Sovereignty
+- **Defense-in-Depth:** Nexum utilizes a `QuantumResistantAgent` to monitor and mitigate threats from quantum computing.
+- **Algorithm Agility:** The system is designed to swap standard ECC signatures for Post-Quantum Cryptography (PQC) without breaking the Kernel logic.
+- **Goal:** Absolute permanent security for all multi-chain assets under the founder's control.

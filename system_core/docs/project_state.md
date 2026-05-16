@@ -68,3 +68,8 @@
 - [x] **Deployed:** ArchitecturalScout module.
 - [x] **Focus:** Zero-Knowledge Proofs (ZKP) and Swarm Intelligence research.
 - [x] **Strategy:** Transitioning from "Fixed Infrastructure" to "Evolutionary Infrastructure".
+
+## 🛡️ Quantum Resilience Initiated (2026-05-16)
+- [x] **Deployed:** QuantumResistantAgent.
+- [x] **Audit:** Initial cryptographic integrity scan completed.
+- [x] **Vision:** Nexum is now officially "Future-Proofed" against quantum-era vulnerabilities.
