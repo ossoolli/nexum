@@ -10,3 +10,8 @@ To provide a universal, deterministic infrastructure for AI agents. Nexum is a s
 
 ---
 *Status: Strictly Independent. Focus: Nexum Infrastructure.*
+
+## 🧾 Debt & Collection Protocol
+- **Persistence:** Nexum maintains an automated `CollectionAgent` to ensure economic finality.
+- **Escalation:** Unpaid invoices trigger a graduated notification system.
+- **Status:** All collection logic is brand-agnostic and applies to any external client using the Nexum Bridge.

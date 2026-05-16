@@ -501,3 +501,35 @@ class RiskArbiter:
             "Protecting Mutaz Tailakh's assets with autonomous oversight."
         )
         return risk_report
+
+class SovereignCollectionAgent:
+    def __init__(self, human_gateway, chronicler):
+        self.gateway = human_gateway
+        self.chronicler = chronicler
+        self.pending_collections = {}
+
+    def track_invoice(self, invoice_id, due_date, amount):
+        """إضافة فاتورة لمسار المتابعة"""
+        self.pending_collections[invoice_id] = {
+            "due_date": due_date,
+            "amount": amount,
+            "notices_sent": 0,
+            "status": "UNPAID"
+        }
+
+    def execute_collection_run(self):
+        """فحص كافة الفواتير المتأخرة واتخاذ إجراء"""
+        print("🧾 [Collection]: جاري فحص سجلات التحصيل السيادية...")
+        for inv_id, data in self.pending_collections.items():
+            if data["status"] == "UNPAID":
+                data["notices_sent"] += 1
+                self._send_sovereign_reminder(inv_id, data)
+
+    def _send_sovereign_reminder(self, inv_id, data):
+        msg = f"🔔 [Reminder]: الفاتورة {inv_id} بقيمة {data['amount']} مستحقة. يرجى التسوية لضمان استمرار الخدمة."
+        print(f"📡 [Collection]: إرسال إخطار رقم {data['notices_sent']} للفاتورة {inv_id}")
+        self.chronicler.document_build(
+            f"Collection Notice: {inv_id}",
+            f"Notice #{data['notices_sent']} sent for unpaid balance.",
+            "Ensuring liquidity flow within the Nexum ecosystem."
+        )
