@@ -1,4 +1,3 @@
-import json
 import os
 import datetime
 
@@ -22,8 +21,7 @@ class NexumKernel:
         <html lang="ar" dir="rtl">
         <head>
             <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>OSSOOLLI | Sovereign Dashboard</title>
+            <title>NEXUM | Sovereign Dashboard</title>
             <style>
                 body {{ background-color: #0a0a0a; color: #d4af37; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }}
                 .container {{ text-align: center; border: 1px solid #1a1a1a; padding: 3rem; border-radius: 15px; background: #0f0f0f; box-shadow: 0 20px 50px rgba(0,0,0,0.8); width: 80%; max-width: 600px; }}
@@ -39,8 +37,8 @@ class NexumKernel:
         </head>
         <body>
             <div class="container">
-                <h1>OSSOOLLI</h1>
-                <div class="brand">SOVEREIGN ASSETS INFRASTRUCTURE</div>
+                <h1>NEXUM</h1>
+                <div class="brand">SOVEREIGN INFRASTRUCTURE</div>
                 <div class="stats-grid">
                     <div class="stat-card">
                         <div class="stat-label">حالة النظام</div>
@@ -48,19 +46,19 @@ class NexumKernel:
                     </div>
                     <div class="stat-card">
                         <div class="stat-label">المحافظ النشطة</div>
-                        <div class="stat-value">{vault_count} Chains</div>
+                        <div class="stat-value">{vault_count} Chains active</div>
                     </div>
                 </div>
-                <div class="footer">LAST SYNC: {timestamp} | SECURED BY NEXUM KERNEL</div>
+                <div class="footer">LAST SYNC: {timestamp} | SECURED BY NEXUM KERNEL v0.3.1</div>
             </div>
         </body>
         </html>
         """
-        with open("index.html", "w", encoding="utf-8") as f:
+        with open("../index.html", "w", encoding="utf-8") as f:
             f.write(html_content)
         return True
 
 if __name__ == "__main__":
     k = NexumKernel()
     if k.sync_dashboard():
-        print("✅ [Dashboard Synced]: OSSOOLLI interface updated with live pulse.")
+        print("✅ [NEXUM Identity Restored]: The dashboard is now correctly branded.")
