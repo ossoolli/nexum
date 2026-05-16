@@ -40,3 +40,8 @@ The network is in a state of **Total Mobilization** ordered by Mutaz Tailakh.
 - **Central Intelligence:** Nexum is no longer a collection of tools, but a synchronized orchestra.
 - **Event-Driven:** The `MasterAutomator` triggers cross-agent workflows based on system signals.
 - **Sovereign Efficiency:** The goal is to minimize the "Human-in-the-loop" requirement for technical maintenance, leaving only strategic approval for **Mutaz Tailakh**.
+
+## 🚨 Emergency Protocols (Shadow Erase)
+- Ultimate Safeguard: Nexum is equipped with a self-destruct sequence for sensitive logs and session data.
+- Trigger: Only Mutaz Tailakh holds the encrypted key to initiate a ShadowErase.
+- Finality: Once triggered, the Kernel terminates all active bridges and purges the target_paths defined in the protocol.

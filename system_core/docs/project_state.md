@@ -98,3 +98,8 @@
 - [x] Deployed: Founder Identity Bypass (kernel_guard.py).
 - [x] Expanded: Treasury now includes SOL, ETH (ERC20), and TRC20 wallets.
 - [x] Status: Sovereign Override active; Nexum v0.2.7-Alpha is secure.
+
+## 🚨 Emergency Kill-Switch Live (2026-05-16)
+- [x] Deployed: ShadowErase protocol in core/protocols/.
+- [x] Feature: Automated wiping of logs, state files, and invoices.
+- [x] Status: Emergency Key "NEXUM-SIGMA-99" is armed and ready.
