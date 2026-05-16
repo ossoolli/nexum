@@ -1,0 +1,11 @@
+{
+    "requester": "Economic-Sovereign",
+    "target_type": "SMART_CONTRACT",
+    "design_name": "NST-Minting-Protocol-v1",
+    "logic_payload": {
+        "minting_trigger": "Proof-of-Evolution-Success",
+        "reward_per_upgrade": "500 NST",
+        "max_supply": 100000000,
+        "halving_cycle": "Every-1000-Blocks"
+    }
+}

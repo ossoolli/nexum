@@ -1,0 +1,15 @@
+{
+    "requester": "Sentinel-Agent",
+    "target_type": "SECURITY_PROTOCOL",
+    "design_name": "Nexum-Firewall-v1",
+    "logic_payload": {
+        "priority": "High",
+        "required_resources": {
+            "cpu_cores": 2,
+            "ram_gb": 4,
+            "gpu_accel": false
+        },
+        "mining_reward": "250 NST",
+        "execution_fee": "50 NST"
+    }
+}

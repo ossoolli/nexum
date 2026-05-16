@@ -1,0 +1,10 @@
+{
+    "requester": "Finance-Architect",
+    "target_type": "SMART_CONTRACT",
+    "design_name": "NST-Sovereign-Token-v1",
+    "logic_payload": {
+        "standard": "Nexum-Asset-Standard",
+        "supply": "Fixed-100M",
+        "minting_rule": "Proof-of-Task-Completion"
+    }
+}

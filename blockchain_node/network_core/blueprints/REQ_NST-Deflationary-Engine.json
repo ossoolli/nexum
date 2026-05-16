@@ -1,0 +1,10 @@
+{
+    "requester": "Guardian-Agent",
+    "target_type": "BURN_PROTOCOL",
+    "design_name": "NST-Deflationary-Engine",
+    "logic_payload": {
+        "transaction_burn_rate": "25%",
+        "penalty_burn_active": true,
+        "scarcity_logic": "Auto-Burn-On-Execution"
+    }
+}

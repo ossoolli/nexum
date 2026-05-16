@@ -1,0 +1,13 @@
+{
+    "requester": "Evolution-Agent",
+    "target_type": "RESEARCH_NODE",
+    "design_name": "Nexum-Superpower-Lab",
+    "logic_payload": {
+        "mode": "Proactive-Innovation",
+        "search_scope": [
+            "Blockchain-Trends",
+            "AI-Self-Optimization"
+        ],
+        "proposal_frequency": "Continuous"
+    }
+}
