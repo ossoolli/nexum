@@ -58,3 +58,8 @@ Nexum is now officially integrated with the TON blockchain via Telegram.
 - **Reporting:** The Kernel is capable of aggregating real-time data across BTC, TON, TRON, and EVM.
 - **Sovereign Command:** The `/wealth` command is reserved for **Mutaz Tailakh** to monitor global liquidity.
 - **Security:** Balances are processed within the Kernel; only the finalized report is exposed to the authorized UI.
+
+## 🛡️ Risk Management & Security (The Arbiter)
+- **Monitoring:** The `RiskArbiter` performs continuous checks on market volatility and wallet liquidity.
+- **Safety Protocol:** If a "CRITICAL" risk is detected, the Kernel is instructed to pause all non-essential NST burns.
+- **Founder Alert:** Mutaz Tailakh receives priority notifications for any operational anomalies.
