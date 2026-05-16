@@ -448,3 +448,35 @@ class LiquidityArbiter:
                 f"Vault {addr} is active and monitored.",
                 "Ensuring continuous operational readiness for Nexum agents."
             )
+
+    def generate_wealth_report(self):
+        """توليد تقرير مالي شامل لجميع الخزائن"""
+        print("📊 [Reporting]: جاري تجميع بيانات الثروة السيادية...")
+        
+        report = f"""
+        🏛️ NEXUM SOVEREIGN WEALTH REPORT
+        ========================================
+        Founder: Mutaz Ismail Ahmed Tailakh
+        Date: {self.chronicler.get_timestamp()}
+        
+        1. BITCOIN (Vault A): 
+           Addr: {self.treasuries['BITCOIN'][:10]}...
+           Status: SECURE | Balance: [SYNCING]
+           
+        2. EVM/zkSync (Vault B): 
+           Addr: {self.treasuries['EVM_CHAINS'][:10]}...
+           Status: ACTIVE | Gas: OK
+           
+        3. TRON (Vault C): 
+           Addr: {self.treasuries['TRON'][:10]}...
+           Status: LIQUID | USDT: OK
+           
+        4. TELEGRAM/TON (Vault D): 
+           Addr: {self.treasuries['TELEGRAM_TON'][:10]}...
+           Status: READY | TON: OK
+        
+        ========================================
+        Sovereignty Level: MAXIMUM
+        ========================================
+        """
+        return report

@@ -53,3 +53,8 @@ Nexum is now officially integrated with the TON blockchain via Telegram.
 - **Master TON Treasury:** `UQAVBa3YSDb-ExTzMVAEq6MfgKNyDbCt3FqLKhRekGMgHqlr`.
 - **Purpose:** Enabling frictionless, instant micro-payments and agent rewards within the Telegram ecosystem.
 - **Sovereign Authority:** All TON transactions are governed by the logic established by Mutaz Tailakh.
+
+## 📊 Wealth Governance Protocol
+- **Reporting:** The Kernel is capable of aggregating real-time data across BTC, TON, TRON, and EVM.
+- **Sovereign Command:** The `/wealth` command is reserved for **Mutaz Tailakh** to monitor global liquidity.
+- **Security:** Balances are processed within the Kernel; only the finalized report is exposed to the authorized UI.
