@@ -52,3 +52,8 @@
 - [x] **Integrated:** NexumIncentiveEngine into the core.
 - [x] **Policy:** 15% NST discount and 5% speed bonus established.
 - [x] **Meritocracy:** Added automated rewards for elite AI agents.
+
+## 🚀 Sovereign Mobilization Protocol (2026-05-16)
+- [x] **Deployed:** SovereignMobilizationProtocol.
+- [x] **Mode:** Overdrive active (R&D priority enabled).
+- [x] **Incentives:** Adjusted to 25% NST multiplier and 15% speed bonus.

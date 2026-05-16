@@ -560,3 +560,29 @@ class NexumIncentiveEngine:
                 f"Distributed {bonus} NST for exceptional performance (>95%).",
                 "Driving high-fidelity execution across the Nexum network."
             )
+
+class SovereignMobilizationProtocol:
+    def __init__(self, incentive_engine, chronicler):
+        self.incentive_engine = incentive_engine
+        self.chronicler = chronicler
+        self.is_overdrive_active = False
+
+    def activate_mobilization(self):
+        """تفعيل وضع الاستنفار القصوى"""
+        self.is_overdrive_active = True
+        self.incentive_engine.early_bird_bonus = 0.15
+        self.incentive_engine.nst_multiplier = 0.25
+        
+        print("🚀 [Mobilization]: تم تفعيل وضع الاستنفار! كافة الوكلاء في حالة Overdrive.")
+        self.chronicler.document_build(
+            "Sovereign Mobilization",
+            "Kernel entered high-speed R&D mode. Performance rewards doubled.",
+            "Accelerating infrastructure building under Mutaz Tailakh's direct order."
+        )
+
+    def prioritize_rd_tasks(self, task_queue):
+        """توجيه كافة الموارد لمهام البحث والتطوير"""
+        if self.is_overdrive_active:
+            print("🧠 [R&D]: إعادة ترتيب الأولويات... مهام البحث والتطوير في المقدمة.")
+            return sorted(task_queue, key=lambda x: x.get('is_rd', False), reverse=True)
+        return task_queue
