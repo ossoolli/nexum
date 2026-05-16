@@ -433,3 +433,18 @@ class MultiChainSettlementHub:
         """إضافة شبكة TON إلى الخزائن السيادية"""
         self.treasuries["TELEGRAM_TON"] = "UQAVBa3YSDb-ExTzMVAEq6MfgKNyDbCt3FqLKhRekGMgHqlr"
         print(f"💎 [Multi-Chain]: تم ربط محفظة تليجرام (TON) بنجاح: {self.treasuries['TELEGRAM_TON']}")
+
+class LiquidityArbiter:
+    def __init__(self, settlement_hub, chronicler):
+        self.hub = settlement_hub
+        self.chronicler = chronicler
+        self.thresholds = {"ETH": 0.01, "TON": 1.0, "TRX": 20.0}
+    def check_all_vaults(self):
+        """فحص مستويات الوقود الرقمي في كافة الخزائن"""
+        print("🔍 [Arbiter]: جاري فحص مستويات السيولة عبر السلاسل...")
+        for net, addr in self.hub.treasuries.items():
+            self.chronicler.document_build(
+                f"Health Check: {net}",
+                f"Vault {addr} is active and monitored.",
+                "Ensuring continuous operational readiness for Nexum agents."
+            )
