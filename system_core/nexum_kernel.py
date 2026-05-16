@@ -533,3 +533,30 @@ class SovereignCollectionAgent:
             f"Notice #{data['notices_sent']} sent for unpaid balance.",
             "Ensuring liquidity flow within the Nexum ecosystem."
         )
+
+class NexumIncentiveEngine:
+    def __init__(self, treasury, chronicler):
+        self.treasury = treasury
+        self.chronicler = chronicler
+        self.nst_multiplier = 0.15
+        self.early_bird_bonus = 0.05
+
+    def calculate_incentive(self, amount, payment_method, elapsed_time_hours):
+        discount = 0
+        if payment_method == "NST":
+            discount += amount * self.nst_multiplier
+        if elapsed_time_hours <= 1:
+            discount += amount * self.early_bird_bonus
+        final_amount = amount - discount
+        print(f"🎁 [Incentive]: تم تطبيق خصم بقيمة {discount}. المبلغ النهائي: {final_amount}")
+        return final_amount, discount
+
+    def reward_agent_efficiency(self, agent_id, performance_score):
+        if performance_score > 0.95:
+            bonus = 50
+            print(f"🌟 [Incentive]: مكافأة أداء للوكيل {agent_id} بقيمة {bonus} NST")
+            self.chronicler.document_build(
+                f"Agent Reward: {agent_id}",
+                f"Distributed {bonus} NST for exceptional performance (>95%).",
+                "Driving high-fidelity execution across the Nexum network."
+            )
