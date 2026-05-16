@@ -685,3 +685,26 @@ class DiplomacyOrchestrator:
             f"Ensuring optimal NST trade conditions for Mutaz Tailakh's network."
         )
         return treaty_details
+
+class SovereignGovernanceGuardian:
+    def __init__(self, chronicler):
+        self.chronicler = chronicler
+        self.immutable_laws = [
+            "FOUNDER_ROOT_AUTHORITY",
+            "TREASURY_ISOLATION",
+            "PROTOCOL_NEUTRALITY"
+        ]
+
+    def verify_integrity(self, proposal):
+        """فحص أي مقترح أو كود جديد مقابل الدستور البرمجي"""
+        print("⚖️ [Governance]: جاري فحص الامتثال لدستور Nexum...")
+        
+        if proposal.get("target") == "core_logic" and not proposal.get("authorized_by") == "Mutaz Tailakh":
+            raise PermissionError("Constitutional Violation: Unauthorized Core Modification.")
+        
+        self.chronicler.document_build(
+            "Governance Audit",
+            "Integrity check passed. Proposal aligns with Sovereign Laws.",
+            "Enforcing the Immutable Constitution of Nexum."
+        )
+        return True
