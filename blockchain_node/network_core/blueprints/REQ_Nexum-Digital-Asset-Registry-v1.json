@@ -1,0 +1,9 @@
+{
+    "requester": "Data-Agent",
+    "target_type": "DATA_LEDGER",
+    "design_name": "Nexum-Digital-Asset-Registry-v1",
+    "logic_payload": {
+        "module": "Nexum-Sovereign-Logic",
+        "storage": "Decentralized-Nodes"
+    }
+}

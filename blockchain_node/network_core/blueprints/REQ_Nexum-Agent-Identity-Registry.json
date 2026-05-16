@@ -1,0 +1,9 @@
+{
+    "requester": "Scout-Agent",
+    "target_type": "SMART_CONTRACT",
+    "design_name": "Nexum-Agent-Identity-Registry",
+    "logic_payload": {
+        "auth": "Sovereign-Blockchain-Auth",
+        "access": "Admin-Encryption"
+    }
+}
