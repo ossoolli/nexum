@@ -63,3 +63,8 @@
 - [x] **Incentive Boost:** Increased speed bonuses to 15%.
 - [x] **Focus:** Shifted 100% of agent resources to Research & Development.
 - [x] **Order:** Accelerated building of core infrastructure modules.
+
+## 🔭 Architectural Scouting Active (2026-05-16)
+- [x] **Deployed:** ArchitecturalScout module.
+- [x] **Focus:** Zero-Knowledge Proofs (ZKP) and Swarm Intelligence research.
+- [x] **Strategy:** Transitioning from "Fixed Infrastructure" to "Evolutionary Infrastructure".

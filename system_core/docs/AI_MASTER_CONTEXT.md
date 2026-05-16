@@ -14,3 +14,8 @@ The network is in a state of **Total Mobilization** ordered by Mutaz Tailakh.
 
 ---
 *Status: WARP SPEED ACTIVE. Focus: Infrastructure Expansion.*
+
+## 🔭 Architectural Expansion (The Scout)
+- **Evolutionary Logic:** Nexum is not a static codebase; it utilizes the `ArchitecturalScout` to integrate cutting-edge decentralization tech.
+- **Current Frontier:** Focusing on Zero-Knowledge Proofs (ZKP) to allow agents to verify tasks without exposing raw data.
+- **Authority:** The Scout reports directly to the Kernel, with final design approval reserved for Mutaz Tailakh.
