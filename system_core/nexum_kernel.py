@@ -384,7 +384,7 @@ class SovereignSupportLiaison:
             return f"شكراً لتواصلك مع Nexum. أنا هنا لخدمتك تحت إشراف الأستاذ {self.founder_name}. كيف يمكنني مساعدتك في إدارة أصولك اليوم؟"
 
     def _explain_last_invoice(self, human_id):
-        return "لقد راجعت سجلاتك. فاتورتك الأخيرة مكتملة وموثقة على الشبكة. يمكنك تحميل النسخة الرسمية من بوابة OSSOOLLI."
+        return "لقد راجعت سجلاتك. فاتورتك الأخيرة مكتملة وموثقة على الشبكة. يمكنك تحميل النسخة الرسمية من السجل السيادي."
 
 class Web3SettlementBridge:
     def __init__(self, chronicler):

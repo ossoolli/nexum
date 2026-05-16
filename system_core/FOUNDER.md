@@ -1,7 +1,7 @@
 # 🏛️ The Architect of Sovereignty
 
 ## **Mutaz Ismail Ahmed Tailakh**
-**Founder & Chief Architect of Nexum & OSSOOLLI**
+**Founder & Chief Architect of Nexum Sovereign OS**
 
 > "Intelligence is not just about processing data; it's about governing value with sovereignty."
 

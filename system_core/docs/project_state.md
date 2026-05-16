@@ -37,3 +37,8 @@
 - [x] **Deployed:** RiskArbiter module.
 - [x] **Feature:** Autonomous risk assessment for multi-chain assets.
 - [x] **Protocol:** High-density security monitoring integrated into the Kernel.
+
+## 🧹 Strategic Decoupling (2026-05-16)
+- [x] **Purged:** All references to external client names from the core and docs.
+- [x] **Redefined:** Nexum as a standalone Sovereign Infrastructure.
+- [x] **Updated:** FOUNDER.md and AI_MASTER_CONTEXT.md for total brand isolation.

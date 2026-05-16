@@ -6,7 +6,7 @@
 
 ### 👤 Customer Information
 - **Client ID:** {human_id}
-- **Service Portal:** OSSOOLLI
+- **Service Portal:** Nexum Portal
 - **Date:** {timestamp}
 
 ### 🤖 Execution Details
