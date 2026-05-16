@@ -1,0 +1,93 @@
+import json
+import pandas as pd
+
+def get_system_data():
+    audit = pd.read_csv('shared_memory/audit_log.csv').to_dict(orient='records')
+    with open('shared_memory/intelligence.json', 'r') as f:
+        intel = json.load(f)
+    return {'audit': audit, 'intelligence': intel}
+import json
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+
+async def handle_upgrade_system(update, context):
+    # استدعاء Tech-Master
+    await update.message.reply_text("🔍 جاري مراجعة الأكواد عبر Tech-Master...")
+
+async def handle_infrastructure(update, context):
+    keyboard = [[InlineKeyboardButton("🐳 Docker Status", callback_data='docker_status'), InlineKeyboardButton("📂 Git Pull", callback_data='git_pull'), InlineKeyboardButton("🧹 Smart Clean", callback_data='smart_clean')]]
+    await update.message.reply_text("اختر إجراء البنية التحتية:", reply_markup=InlineKeyboardMarkup(keyboard))
+
+async def handle_research_now(update, context):
+    # تفعيل Scout-Agent
+    await update.message.reply_text("🚀 Scout-Agent بدأ عملية البحث المتقصي لعام 2026...")
+
+async def send_approval_gate(update, context, proposal_title):
+    keyboard = [[InlineKeyboardButton("✅ تنفيذ الترقية", callback_data='approve'), InlineKeyboardButton("❌ رفض", callback_data='reject')]]
+    await update.message.reply_text(f"مقترح جديد: {proposal_title}", reply_markup=InlineKeyboardMarkup(keyboard))
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
+from telegram.ext import Application, CommandHandler, CallbackQueryHandler, ContextTypes
+
+ALLOWED_USER_ID = 123456789 # استبدل بمعرف معتز
+
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    keyboard = [[{"text": "لوحة التحكم", "web_app": {"url": "https://aegant-ai.github.io/dashboard"}}],[InlineKeyboardButton('📊 الحالة', callback_data='status'), InlineKeyboardButton('🛠️ إصلاح شامل', callback_data='fix_all')],
+                [InlineKeyboardButton('💡 استخبارات', callback_data='intel'), InlineKeyboardButton('💰 سجل التوفير', callback_data='savings')]]
+    await update.message.reply_text('مرحباً معتز، اختر أمراً:', reply_markup=InlineKeyboardMarkup(keyboard))
+
+async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    query = update.callback_query
+    if query.from_user.id != ALLOWED_USER_ID: return
+    if query.data == 'fix_all':
+        # استدعاء دالة الإصلاح التلقائي
+        await query.answer('جاري تنفيذ الإصلاح الشامل...')
+    await query.answer()
+
+# إعداد التطبيق...
+import requests
+import os
+
+TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
+url = f'https://api.telegram.org/bot{TOKEN}/setMyCommands'
+commands = {
+    'commands': [
+        {'command': 'dashboard', 'description': 'لوحة التحكم الرئيسية'},
+        {'command': 'fix_all', 'description': 'إصلاح شامل للنظام'},
+        {'command': 'status', 'description': 'حالة النظام'}
+    ]
+}
+requests.post(url, json=commands)
+import json
+import os
+import subprocess
+
+def run_sandbox(code):
+    try:
+        with open("sandbox_test.py", "w") as f:
+            f.write(code)
+        result = subprocess.run(["python3", "sandbox_test.py"], capture_output=True, text=True, timeout=5)
+        return result.stdout if result.returncode == 0 else result.stderr
+    except Exception as e:
+        return str(e)
+
+def check_proposals():
+    if os.path.exists('shared_memory/proposals.json'):
+        with open('shared_memory/proposals.json', 'r') as f:
+            data = json.load(f)
+            return data
+import subprocess
+
+def execute_infra_cmd(category):
+    commands = {
+        'git': 'git pull',
+        'docker': 'docker system prune -f',
+        'restart': 'systemctl restart aegant-ai'
+    }
+    cmd = commands.get(category)
+    if cmd:
+        return subprocess.check_output(cmd, shell=True).decode()
+    return 'Invalid Category'
+def get_webapp_button(url):
+    return {
+        'text': 'فتح واجهة Aegant-AI',
+        'web_app': {'url': url}
+    }

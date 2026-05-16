@@ -1,0 +1,5 @@
+<script>
+async function syncGitHub() { await fetch('/api/infra?cmd=git'); alert('Syncing...'); }
+async function dockerPrune() { await fetch('/api/infra?cmd=docker'); alert('Cleaning...'); }
+async function restartServer() { await fetch('/api/infra?cmd=restart'); alert('Restarting...'); }
+</script>

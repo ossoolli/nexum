@@ -1,0 +1,1 @@
+{"workflow_name": "hello_world", "steps": ["github_webhook", "scout_analysis", "telegram_notify"]}

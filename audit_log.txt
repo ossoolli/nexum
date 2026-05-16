@@ -1,0 +1,1 @@
+طلب تصميم بنية عقد (Node Architecture) مرنة لـ Flow-Master لدعم تكاملات Slack و Gmail API
