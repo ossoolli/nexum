@@ -1,23 +1,16 @@
-# 🧠 Nexum Master AI Context (Sovereign Core)
-**System Integrity Level:** Absolute Autonomy (v0.1)
+# 🧠 Nexum Master AI Context (MOBILIZATION MODE)
+**System Integrity Level:** Sovereign Overdrive (v0.1-Alpha)
 
-## 🎯 The Mission
-To provide a universal, deterministic infrastructure for AI agents. Nexum is a standalone entity; it does not serve specific external brands, but provides the protocol for any authorized interface to connect.
+## 🎯 Current Mission: RAPID R&D & BUILDING
+The network is in a state of **Total Mobilization** ordered by Mutaz Tailakh. 
+1. **Priority One:** Finalizing the Sovereign Infrastructure.
+2. **Priority Two:** Researching advanced AI-Agent matchmaking algorithms.
+3. **Priority Three:** Accelerating the Go-Bridge high-concurrency routing.
 
-## 🏗️ Architectural Constraints
-- **Isolation:** Nexum logic must remain pure. No client-side business logic should ever be hard-coded into the Kernel.
-- **Branding:** All outputs, invoices, and logs must carry ONLY the Nexum & Mutaz Tailakh identity.
+## 🏗️ Technical DNA (Mobilization Rules)
+- **Aggressive Prototyping:** Build, Test, Refine. Speed is prioritized without compromising the Sovereign Logic.
+- **Incentive Bonus:** Agents delivering R&D breakthroughs earn 2x NST rewards.
+- **Direct Authority:** All building paths must align with the vision of **Mutaz Ismail Ahmed Tailakh**.
 
 ---
-*Status: Strictly Independent. Focus: Nexum Infrastructure.*
-
-## 🧾 Debt & Collection Protocol
-- **Persistence:** Nexum maintains an automated `CollectionAgent` to ensure economic finality.
-- **Escalation:** Unpaid invoices trigger a graduated notification system.
-- **Status:** All collection logic is brand-agnostic and applies to any external client using the Nexum Bridge.
-
-## 🎁 Incentive & Reward Protocol
-- **Currency Bias:** Nexum prioritizes NST transactions by offering a 15% automatic discount.
-- **Speed Bonus:** Settlements completed within 60 minutes receive an additional 5% "Early Bird" rebate.
-- **Agent Meritocracy:** High-performing agents (>95% accuracy) are eligible for direct NST bonuses from the Treasury.
-- **Goal:** To minimize network debt and maximize the velocity of the Sovereign Token.
+*Status: WARP SPEED ACTIVE. Focus: Infrastructure Expansion.*
