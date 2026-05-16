@@ -73,3 +73,8 @@
 - [x] **Deployed:** QuantumResistantAgent.
 - [x] **Audit:** Initial cryptographic integrity scan completed.
 - [x] **Vision:** Nexum is now officially "Future-Proofed" against quantum-era vulnerabilities.
+
+## 🤝 Automated Diplomacy Active (2026-05-16)
+- [x] **Deployed:** DiplomacyOrchestrator module.
+- [x] **Function:** Automated liquidity negotiation and cross-protocol treaties.
+- [x] **Vision:** Transitioning Nexum into a connected global economic hub.

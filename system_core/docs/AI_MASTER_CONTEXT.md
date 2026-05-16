@@ -24,3 +24,8 @@ The network is in a state of **Total Mobilization** ordered by Mutaz Tailakh.
 - **Defense-in-Depth:** Nexum utilizes a `QuantumResistantAgent` to monitor and mitigate threats from quantum computing.
 - **Algorithm Agility:** The system is designed to swap standard ECC signatures for Post-Quantum Cryptography (PQC) without breaking the Kernel logic.
 - **Goal:** Absolute permanent security for all multi-chain assets under the founder's control.
+
+## 🤝 Diplomatic & Liquidity Protocols
+- **Interoperability:** Nexum is designed to interact with external DeFi ecosystems via the `DiplomacyOrchestrator`.
+- **Game Theory:** The Agent prioritizes "Win-Win" liquidity scenarios while maintaining absolute Treasury Sovereignty.
+- **Protocol Neutrality:** The Diplomacy Agent treats all chains (BTC, TON, TRON, EVM) as sovereign territories for potential NST expansion.
