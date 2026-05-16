@@ -1,0 +1,6 @@
+---SOVEREIGN_START---
+[STATUS]: SYNC_BUILDER_WITH_CHRONICLER_INITIATED
+[ACTION]: Linking Go Builder stream to ChroniclerModule.
+[POLICY]: Auto-append technical justification to README.md on build success.
+[MANIFEST]: Updating docs/ai_manifest.json with new bridge endpoints.
+---SOVEREIGN_END---
