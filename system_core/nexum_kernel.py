@@ -428,3 +428,8 @@ class MultiChainSettlementHub:
             f"Successfully routed payout through {network} infrastructure.",
             "Expanding Nexum financial reach across multiple protocols."
         )
+
+    def update_treasury_with_ton(self):
+        """إضافة شبكة TON إلى الخزائن السيادية"""
+        self.treasuries["TELEGRAM_TON"] = "UQAVBa3YSDb-ExTzMVAEq6MfgKNyDbCt3FqLKhRekGMgHqlr"
+        print(f"💎 [Multi-Chain]: تم ربط محفظة تليجرام (TON) بنجاح: {self.treasuries['TELEGRAM_TON']}")

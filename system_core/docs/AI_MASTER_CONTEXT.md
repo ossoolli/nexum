@@ -47,3 +47,9 @@ Nexum operates as a cross-chain entity.
 - **Bitcoin Outpost:** bc1p0uuqerrwsqawe0cd74hetayxte0rdrnn9nd9n5h94se2fv7knw2qt4t7v9 (Taproot Enabled).
 - **TRON Outpost:** TXv1MvvP8aJmVHRnafyXzEoqUJXizJ9WXz.
 - **Policy:** The Kernel automatically selects the most cost-effective network for agent settlements.
+
+## 💎 Telegram (TON) Network Integration
+Nexum is now officially integrated with the TON blockchain via Telegram.
+- **Master TON Treasury:** `UQAVBa3YSDb-ExTzMVAEq6MfgKNyDbCt3FqLKhRekGMgHqlr`.
+- **Purpose:** Enabling frictionless, instant micro-payments and agent rewards within the Telegram ecosystem.
+- **Sovereign Authority:** All TON transactions are governed by the logic established by Mutaz Tailakh.
