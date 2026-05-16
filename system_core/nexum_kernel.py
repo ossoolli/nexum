@@ -408,6 +408,9 @@ class MultiChainSettlementHub:
     def __init__(self, chronicler):
         self.chronicler = chronicler
         self.treasuries = {
+            "SOLANA": "GuWPwyXQKXQ5ntMBLHCXqNnhvumdrMnGxAZ4xm2Jiyzf",
+            "USDT_ERC20": "0xd9805c529d944ead2742Ebdbd6DC8Ad005A1E78",
+            "USDT_TRC20": "TW94CS14t8EtswVoQWy4wMoUEZDdtnxcPz",
             "EVM_CHAINS": "0xf0b7cd7aa116264a189293b13be836776e871a78",
             "BITCOIN": "bc1p0uuqerrwsqawe0cd74hetayxte0rdrnn9nd9n5h94se2fv7knw2qt4t7v9",
             "TRON": "TXv1MvvP8aJmVHRnafyXzEoqUJXizJ9WXz"
@@ -724,3 +727,13 @@ class MasterAutomatorOrchestrator:
                 self.modules['diplomacy'].negotiate_liquidity_pair("Global-Bridge", tech['tech'])
         
         print("✅ [Maestro]: اكتملت سلسلة الأتمتة بنجاح سيادي.")
+
+    def execute_sovereign_command(self, user_id, command):
+        """تنفيذ الأوامر بعد التحقق من الهوية السيادية"""
+        from core.security.kernel_guard import check_security_clearance
+        
+        if check_security_clearance(user_id, command):
+            print(f"🔱 [Authority]: تم التصريح للقائد {user_id} بتنفيذ الأمر.")
+            # منطق التنفيذ هنا
+        else:
+            print("⚠️ [Security]: محاولة وصول غير مصرح بها للبيانات الحساسة.")

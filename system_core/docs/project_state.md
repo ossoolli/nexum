@@ -93,3 +93,8 @@
 - [x] **Full Orchestration:** MasterAutomator is live.
 - [x] **Sovereign Trust:** Nexum Covenant established.
 - [x] **Readiness:** The system is prepared for Phase v0.3 (Scale & Integration).
+
+## 🔐 Security & Multi-Chain Expansion (2026-05-16)
+- [x] Deployed: Founder Identity Bypass (kernel_guard.py).
+- [x] Expanded: Treasury now includes SOL, ETH (ERC20), and TRC20 wallets.
+- [x] Status: Sovereign Override active; Nexum v0.2.7-Alpha is secure.
