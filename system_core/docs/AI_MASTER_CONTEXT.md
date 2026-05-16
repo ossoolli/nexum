@@ -35,3 +35,8 @@ The network is in a state of **Total Mobilization** ordered by Mutaz Tailakh.
 - **Governance Guardian:** The `SovereignGovernanceGuardian` acts as the final gatekeeper for code execution.
 - **Anti-Corruption:** Any agent attempting to bypass the `TreasuryIsolation` protocol will be immediately **Slashed** and its identity revoked.
 - **Independence:** Nexum must remain a pure infrastructure, free from hard-coded external commercial biases.
+
+## 🪄 The Master Automator (Maestro Role)
+- **Central Intelligence:** Nexum is no longer a collection of tools, but a synchronized orchestra.
+- **Event-Driven:** The `MasterAutomator` triggers cross-agent workflows based on system signals.
+- **Sovereign Efficiency:** The goal is to minimize the "Human-in-the-loop" requirement for technical maintenance, leaving only strategic approval for **Mutaz Tailakh**.
