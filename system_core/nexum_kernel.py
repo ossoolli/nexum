@@ -1,72 +1,72 @@
 import json
-import os
 import datetime
 
-class NexumKernel:
+class NexumGlobal:
     def __init__(self):
-        self.version = "v0.4.5-Pro"
-        self.vaults = [
-            {"name": "BITCOIN", "symbol": "BTC", "color": "#f7931a"},
-            {"name": "SOLANA", "symbol": "SOL", "color": "#14f195"},
-            {"name": "ETHEREUM", "symbol": "ETH", "color": "#627eea"}
-        ]
+        self.version = "v0.6.0-Global"
+        self.languages = {
+            "AR": "السيادة الرقمية",
+            "EN": "Digital Sovereignty",
+            "ZH": "数字主权"
+        }
+        self.tech_stack = ["Go", "Docker", "Python", "Web3.js"]
 
-    def build_pro_terminal(self):
+    def generate_global_ui(self):
         ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         html = f"""
         <!DOCTYPE html>
-        <html lang="en">
+        <html lang="en" class="dark">
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>NEXUM | Professional Terminal</title>
+            <title>NEXUM | Global Sovereign Terminal</title>
             <script src="https://cdn.tailwindcss.com"></script>
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
             <style>
-                body {{ background: #050505; color: #fff; font-family: 'Inter', sans-serif; }}
-                .glass-card {{ background: rgba(15, 15, 15, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.05); }}
-                .trading-grid {{ display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }}
+                @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;700&display=swap');
+                body {{ background: #000; color: #fff; font-family: 'JetBrains Mono', monospace; }}
+                .binance-gradient {{ background: linear-gradient(180deg, #121212 0%, #000 100%); }}
+                .pulse-border {{ border: 1px solid rgba(212, 175, 55, 0.3); animation: pulse 2s infinite; }}
+                @keyframes pulse {{ 0% {{ border-color: rgba(212, 175, 55, 0.3); }} 50% {{ border-color: rgba(212, 175, 55, 0.8); }} 100% {{ border-color: rgba(212, 175, 55, 0.3); }} }}
             </style>
         </head>
-        <body class="p-6">
-            <nav class="flex justify-between items-center mb-8 p-4 glass-card rounded-xl">
-                <div class="text-2xl font-black tracking-tighter text-yellow-500">NEXUM <span class="text-white">PRO</span></div>
-                <div class="text-xs text-gray-500 tracking-widest uppercase">System Status: <span class="text-green-500">Operational</span></div>
+        <body class="binance-gradient min-h-screen">
+            <nav class="border-b border-white/5 p-6 flex justify-between items-center sticky top-0 bg-black/50 backdrop-blur-xl z-50">
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl font-bold tracking-tighter text-yellow-500">NEXUM</span>
+                    <span class="bg-yellow-500/10 text-yellow-500 text-[10px] px-2 py-1 rounded">MAINNET</span>
+                </div>
+                <div class="hidden md:flex gap-8 text-xs text-gray-500">
+                    <a href="#" class="hover:text-white">MARKETS</a>
+                    <a href="#" class="hover:text-white">VAULTS</a>
+                    <a href="#" class="hover:text-white">ANTIGRAVITY</a>
+                    <a href="#" class="hover:text-white">PROTOCOL</a>
+                </div>
+                <div class="flex gap-4">
+                    <button class="text-xs border border-white/10 px-4 py-2 rounded-lg">AR</button>
+                    <button class="text-xs bg-yellow-500 text-black font-bold px-4 py-2 rounded-lg">CONNECT</button>
+                </div>
             </nav>
-            <div class="max-w-7xl mx-auto">
-                <div class="trading-grid">
-                    <div class="glass-card p-6 rounded-2xl h-[450px]">
-                        <div class="flex justify-between mb-4">
-                            <h2 class="text-sm font-bold text-gray-400 uppercase">Market Intelligence</h2>
-                            <span class="text-xs text-yellow-600">{self.version}</span>
-                        </div>
-                        <canvas id="marketChart"></canvas>
-                    </div>
-                    <div class="space-y-4">
-        """
-        for v in self.vaults:
-            html += f"""
-                        <div class="glass-card p-5 rounded-xl hover:border-yellow-500/30 transition-all">
-                            <div class="flex justify-between items-center">
-                                <span class="text-xs text-gray-500">{v['name']}</span>
-                                <div class="w-2 h-2 rounded-full" style="background: {v['color']}"></div>
+            <main class="max-w-7xl mx-auto p-6 mt-12">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 p-12 rounded-3xl bg-white/5 border border-white/5 relative overflow-hidden">
+                        <h1 class="text-5xl font-bold mb-6 leading-tight">Next-Gen <br> <span class="text-yellow-500">Sovereign Financial</span> OS</h1>
+                        <p class="text-gray-400 max-w-md text-sm mb-8">Integrated with Antigravity protocols and cross-chain intelligence. Built for the future of decentralized assets.</p>
+                        <div class="flex gap-4">
+                            <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+                                <div class="text-[10px] text-gray-500">SYSTEM UPTIME</div>
+                                <div class="text-xl font-bold text-green-500">99.99%</div>
                             </div>
-                            <div class="text-xl font-mono mt-2 tracking-tighter">$ --.---</div>
                         </div>
-            """
-        html += """
                     </div>
                 </div>
-            </div>
-            <script>
-                const ctx = document.getElementById('marketChart').getContext('2d');
-                new Chart(ctx, { type: 'line', data: { labels: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'], datasets: [{ label: 'NEXUM Index', data: [12, 19, 15, 25, 22, 30], borderColor: '#d4af37', tension: 0.4, fill: true, backgroundColor: 'rgba(212, 175, 55, 0.05)' }] }, options: { responsive: true, maintainAspectRatio: false } });
-            </script>
+            </main>
         </body>
         </html>
         """
-        with open("index.html", "w") as f: f.write(html)
+        with open("index.html", "w") as f:
+            f.write(html)
+        print("Global UI generated successfully.")
 
 if __name__ == "__main__":
-    kernel = NexumKernel()
-    kernel.build_pro_terminal()
+    kernel = NexumGlobal()
+    kernel.generate_global_ui()
